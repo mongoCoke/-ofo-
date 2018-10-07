@@ -64,12 +64,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options) {    
     this.timer = options.timer;
     //页面初始化 options为页面跳转所带来的参数
     wx.getLocation({
       success: (res) => {
-        //console.log(res)
+        // console.log(res)
         this.setData({
           longitude: res.longitude,
           latitude: res.latitude
@@ -78,6 +78,7 @@ Page({
     })
     wx.getSystemInfo({
       success: (res) => {
+        // console.log(res)
         this.setData({
           controls: [{
             id: 1,
